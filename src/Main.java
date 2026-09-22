@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Course course1 = new Course("Java Programming", 30, 40);
         Course course2 = new Course("Database Systems", 25, 35);
-        Course course3 = new Course("Python", 19, 30);
+        Course course3 = new Course("Python", 20, 30);
 
         course1.displayCourseInfo();
         course2.displayCourseInfo();
