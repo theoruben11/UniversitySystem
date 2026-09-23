@@ -13,6 +13,7 @@ public class Main {
         System.out.println("Total number of students enrolled (all courses combined): "
                 + Course.getTotalStudentsAllCourses());
         System.out.println("Number of courses created: " + Course.getCourseCount());
+        System.out.println("-----------------------------------");
     }
 }
 
@@ -33,7 +34,9 @@ class Course {
         courseCount++;
         totalFillRateSum += (studentsRegistered / (double) capacity) * 100.0;
     }
-
+    public boolean isFull() {
+        return studentsRegistered >= capacity;
+    }
     public double calculateFillRate() {
         return (studentsRegistered / (double) capacity) * 100.0;
     }
