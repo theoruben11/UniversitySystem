@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Course course1 = new Course("Java Programming", 30, 50);
-        Course course2 = new Course("Database Systems", 25, 40);
-        Course course3 = new Course("Python", 20, 50);
+        Course course1 = new Course("html and css", 45, 50);
+        Course course2 = new Course("Javascript", 33, 40);
+        Course course3 = new Course("Python", 25, 50);
 
         course1.displayCourseInfo();
         course2.displayCourseInfo();
