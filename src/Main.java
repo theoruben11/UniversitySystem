@@ -13,6 +13,7 @@ public class Main {
         System.out.println("Total number of students enrolled (all courses combined): "
                 + Course.getTotalStudentsAllCourses());
         System.out.println("Number of courses created: " + Course.getCourseCount());
+        System.out.println("-----------------------------------");
     }
 }
 
