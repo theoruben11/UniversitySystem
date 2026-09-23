@@ -12,7 +12,7 @@ public class Main {
         System.out.println("OVERALL UNIVERSITY STATISTICS");
         System.out.println("Total number of students enrolled (all courses combined): "
                 + Course.getTotalStudentsAllCourses());
-        System.out.println("Number of courses created: " + Course.getCourseCount());
+        System.out.println("Number of courses created:........ " + Course.getCourseCount());
         System.out.println("-----------------------------------");
     }
 }
@@ -56,7 +56,7 @@ class Course {
         } else {
             System.out.println("  Status: Open");
         }
-        System.out.println("  Available seats: " + getAvailableSeats());
+        System.out.println("  Available seats:...... " + getAvailableSeats());
     }
 
     public static int getTotalStudentsAllCourses() {
