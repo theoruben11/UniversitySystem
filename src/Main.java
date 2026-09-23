@@ -13,6 +13,7 @@ public class Main {
         System.out.println("Total number of students enrolled (all courses combined): "
                 + Course.getTotalStudentsAllCourses());
         System.out.println("Number of courses created: " + Course.getCourseCount());
+        System.out.println("-----------------------------------");
     }
 }
 
@@ -23,6 +24,7 @@ class Course {
 
     private static int totalStudentsAllCourses = 0;
     private static int courseCount = 0;
+    private static double totalFillRateSum = 0;
 
     public Course(String courseName, int studentsRegistered, int capacity) {
         this.courseName = courseName;
@@ -30,8 +32,11 @@ class Course {
         this.capacity = capacity;
         totalStudentsAllCourses += studentsRegistered;
         courseCount++;
+        totalFillRateSum += (studentsRegistered / (double) capacity) * 100.0;
     }
-
+    public boolean isFull() {
+        return studentsRegistered >= capacity;
+    }
     public double calculateFillRate() {
         return (studentsRegistered / (double) capacity) * 100.0;
     }
@@ -50,5 +55,8 @@ class Course {
 
     public static int getCourseCount() {
         return courseCount;
+    }
+    public static double getAverageFillRate() {
+        return totalFillRateSum / courseCount;
     }
 }
