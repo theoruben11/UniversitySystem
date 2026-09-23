@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Course course1 = new Course("Java Programming", 30, 40);
-        Course course2 = new Course("Database Systems", 25, 35);
-        Course course3 = new Course("Python", 20, 30);
+        Course course1 = new Course("Java Programming", 30, 50);
+        Course course2 = new Course("Database Systems", 25, 40);
+        Course course3 = new Course("Python", 20, 50);
 
         course1.displayCourseInfo();
         course2.displayCourseInfo();
@@ -36,7 +36,7 @@ class Course {
         return (studentsRegistered / (double) capacity) * 100.0;
 
     }
-    public boolean isFull() {                          // COMMIT 1
+    public boolean isFull() {
         return studentsRegistered >= capacity;
     }
 
@@ -47,7 +47,7 @@ class Course {
         System.out.println("  Students enrolled: " + studentsRegistered + " / " + capacity);
         System.out.println("  Fill rate: " + String.format("%.1f", fillRate) + "%");
 
-        if (isFull()) {                                 // COMMIT 2
+        if (isFull()) {
             System.out.println("  Status: FULL");
         } else {
             System.out.println("  Status: Open");
