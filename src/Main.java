@@ -34,6 +34,10 @@ class Course {
 
     public double calculateFillRate() {
         return (studentsRegistered / (double) capacity) * 100.0;
+
+    }
+    public boolean isFull() {                          // COMMIT 1
+        return studentsRegistered >= capacity;
     }
 
     public void displayCourseInfo() {
@@ -42,6 +46,12 @@ class Course {
         System.out.println("Course: " + courseName);
         System.out.println("  Students enrolled: " + studentsRegistered + " / " + capacity);
         System.out.println("  Fill rate: " + String.format("%.1f", fillRate) + "%");
+
+        if (isFull()) {                                 // COMMIT 2
+            System.out.println("  Status: FULL");
+        } else {
+            System.out.println("  Status: Open");
+        }
     }
 
     public static int getTotalStudentsAllCourses() {
