@@ -55,6 +55,7 @@ class Course {
         } else {
             System.out.println("  Status: Open");
         }
+        System.out.println("  Available seats: " + getAvailableSeats());
     }
 
     public static int getTotalStudentsAllCourses() {
